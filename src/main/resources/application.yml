@@ -1,0 +1,32 @@
+spring:
+    application:
+        name: Spring
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost/spring
+        username: root
+        password: root
+    jpa:
+      # Specify the DBMS
+      database: mysql
+      # Show or not log for each sql query
+      show-sql: true
+      hibernate:
+        # Hibernate ddl auto (create, create-drop, update)
+        ddl-auto: update
+        # Naming strategy
+#        naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      # stripped before adding them to the felix.entity manager
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5Dialect
+    data:
+      mongodb:
+#        host: localhost
+        port: 27017
+#        database: test
+        uri: mongodb://localhost/test
+        database: test
+
+server:
+    port: 8080
